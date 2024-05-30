@@ -33,5 +33,5 @@ export default {
 </template>
 
 <style scoped>
-/* pLACEHOLDER */
+/* pLACEHOLDERs */
 </style>
