@@ -1,4 +1,6 @@
 <script>
+import Store from '../data/store.js'
+import Fontawesome from "fontawesome"
 
 export default {
   name: "AppHeader",
@@ -6,6 +8,8 @@ export default {
   data() {
     return {
       title: "netflix",
+      Store,
+      Fontawesome,
     }
   },
   methods: {
@@ -22,30 +26,42 @@ export default {
 
 <template>
   <header>
-    <h1>{{ title }}</h1>
-    <ul>
-      <!-- <li v-for="prova in links">
-        <a :href="prova.link">{{ prova.text }}</a>
-      </li> -->
-    </ul>
+
+    <!-- destra headre -->
+    <div class="sx">
+      <h1>{{ title }}</h1>
+      <ul>
+        <li v-for="link in Store.headerLinks">
+          <a :href="link.url">{{ link.text }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- sinistra header -->
+    <div class="dx">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <a href="#Bambini">Bambini</a>
+      <i class="fa-regular fa-bell"></i>
+    </div>
   </header>
 </template>
 
 
 <style scoped>
 header {
-  background: rgb(255, 255, 255);
+  background: #141414;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
-  color: #111;
+  color: white;
 }
 
 ul {
   list-style-type: none;
 }
 
-li {
+li,
+.dx * {
   display: inline-block;
   padding: 0 1rem
 }
@@ -53,5 +69,16 @@ li {
 a {
   text-decoration: none;
   color: unset;
+}
+
+i {
+  font-size: 1.4rem;
+}
+
+.dx,
+.sx {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
 }
 </style>

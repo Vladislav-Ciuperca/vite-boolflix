@@ -1,17 +1,12 @@
 <script>
-import FilmCard from './FilmCard.vue'
 import axios from "axios"
 import Store from '../data/store.js'
 
 export default {
-    components: {
-        FilmCard,
-    }, 20
-    name: "AppBody",
+    name: "FilmCard",
 
     data() {
         return {
-            papaya: "",
             Store,
             options: {
                 method: 'GET',
@@ -49,7 +44,7 @@ export default {
 
 
 <template>
-    <FilmCard />
+
     <div v-for="elemento in Store.films">
         <img :src="getImage(elemento.poster_path)" alt="">
     </div>
