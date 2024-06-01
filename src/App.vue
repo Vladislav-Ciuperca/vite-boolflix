@@ -26,12 +26,22 @@ export default {
 </script>
 
 <template>
-  <div>
-    <AppHeader />
+  <AppHeader />
+  <h2>ORIGINALI NETFLIX</h2>
+  <!-- main -->
+  <main>
     <AppBody />
-  </div>
+  </main>
+
 </template>
 
 <style scoped>
-/* pLACEHOLDERs */
+/* main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3rem;
+  gap: 2rem;
+  padding-top: 7rem;
+  align-items: start;
+} */
 </style>

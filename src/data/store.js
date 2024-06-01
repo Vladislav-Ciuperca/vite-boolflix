@@ -1,6 +1,7 @@
 import { reactive } from 'vue'
 
 const informazioni = {
+    search: "",
     nome: "fims :",
     films: "",
     headerLinks: [
@@ -9,7 +10,8 @@ const informazioni = {
         { text: "Nuovi e popolari", url: "Nuovi e popolari" },
         { text: "La mia lista", url: "#La mia lista" },
         { text: "Sfoglia per lingua", url: "#Sfoglia per lingua" },
-    ]
+    ],
+
 }
 
 
